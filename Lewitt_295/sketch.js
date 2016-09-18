@@ -8,6 +8,8 @@ function setup() {
 }
 
 function draw() {
+  stroke(250);
+  line(400, 550, 400, 350);
   noFill();
   stroke(250);
   triangle(x1, y1, x2, y2, 400, 350);
