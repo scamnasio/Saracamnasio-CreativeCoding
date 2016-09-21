@@ -1,6 +1,10 @@
+/**
+ * Kevin's notes: adds comments 
+ */
 function setup() {
   createCanvas(800,600);
   background(0);
+  //remember to declare your variables with the word var
   x1=300;
   y1=550;
   x2=500;
