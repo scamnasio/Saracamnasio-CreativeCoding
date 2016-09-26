@@ -1,3 +1,3 @@
 #Homework #2
-![alt text](Sara_295.png "Description goes here")
-![alt text](Sara_295.png "Description goes here")
+![alt text](original.png "Description goes here")
+![alt text](p5_drawing.png "Description goes here")
