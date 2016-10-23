@@ -9,16 +9,16 @@ function draw() {
   fill(170, 114, 0);
   rect(random(500), random(500), 3, 1, 50);
   fill(199, 138, 11);
-  rect(random(500), random(500), 2, 2, 50);
+  rect(random(500), random(500), 2, 1, 50);
   fill(190, 133, 9);
   rect(random(500), random(500), 1, 2, 50);
   fill(196, 138, 30);
-  rect(random(500), random(500), 2, 1, 50);
+  rect(random(500), random(500), 2, 3, 50);
   fill(156, 98, 2);
-  rect(random(500), random(500), 2, 2, 50);
+  rect(random(500), random(500), 1, 1, 50);
   
   howMany++;
-  if (howMany>1000) {
+  if (howMany>10000) {
     noLoop();
   }
   
