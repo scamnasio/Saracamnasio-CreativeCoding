@@ -27,7 +27,7 @@ function draw() {
     for(var j=-1; j < 600; j+=45){
       push();
       translate(i, j);
-      fill(random(50),random(100),random(40));
+      fill(random(50),random(100),random(20));
       ellipse(0,0,width/9,width/9);
       pop();
     }

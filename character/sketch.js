@@ -3,19 +3,22 @@ var y;
 
 function setup() {
   createCanvas(600,600);
-  
 }
 
 function draw() {
-  duck(mouseX-300,mouseY-300, c=(mouseX, mouseY, mouseY));
-  
+  for (var i =1; i < 1.4; i=+0.01){
+   
+    scale(i);
+    duck(0,0, c=(mouseX, mouseY, mouseY));
+ 
+  }
 }
 function duck(x,y,c) {
   // x= shift in x from center
   // y= shift in y from center
   // c=color of the eyes
-  
-  background(250);
+  background(255);
+ 
   // face
   noFill();
   stroke("black");
