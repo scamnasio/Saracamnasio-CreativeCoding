@@ -1,4 +1,4 @@
-#Homework week 1 pt.2
+#Homework 1 pt.2
 #Instructions: Wall Drawing #295 (1976)
 
 Six white geometric figures (outlines) superimposed on a black wall.
