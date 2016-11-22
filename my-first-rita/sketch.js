@@ -1,24 +1,25 @@
 var lexicon;
-var poem = [];
-var words = [];
-var newpoem;
-var punctuation=[];
 
 function preload() {
- poem = loadStrings('Garden.txt');
-
+  poem = loadStrings('Garden.txt');
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 450);
   background(255);
+  
+  //instructions
+  textSize(15);
+  textAlign(RIGHT, TOP);
+  var instructions="Click anywhere for madlibs!";
+  text(instructions, 0,100,width,height);
+  
+  lexicon = new RiLexicon();
+  makeTitle();
   var oneString = poem.join(' ');
   var sentences = RiTa.tokenize(oneString);
-  lexicon = new RiLexicon();
   textSize(20);
   textAlign(LEFT, TOP);
-  //punctuation=[7,15,23,32,41,50,58,65,74,81,91];
-  //print(poem);
   sentences[7]="\n";
   sentences[15]="\n";
   sentences[23]="\n";
@@ -31,15 +32,59 @@ function setup() {
   sentences[81]="\n";
   sentences[91]="\n";
   sentences[100]="";
-  //var almostThere = sentences.join(' ');
-  text(sentences, 0,0,width,height);
+  var almostThere = sentences.join(' ');
+  text(almostThere, 0,70,width,height);
+}  
   
-  
+function makeTitle() {
+  textSize(30);
+  textAlign(LEFT, TOP);
+  var title="The Garden of Love";
+  text(title, 0,0,width,height);
+  textSize(20);
+  var subtitle="by William Blake";
+  text(subtitle, 0,30,width,height);
 }
 
+
 function mousePressed() {
+  verb=lexicon.randomWord("vbd", 1);
+  noun=lexicon.randomWord("nn", 2);
+  love=lexicon.randomWord("nns",1);
+  flowers=lexicon.randomWord("nns",2);
   background(255);
-  generateWords();
+  textSize(30);
+  textAlign(LEFT, TOP);
+  var title="The Garden of" + " " + love;
+  text(title, 0,0,width,height);
+  textSize(20);
+  var subtitle="by William Blake";
+  text(subtitle, 0,30,width,height);
+  var output = "I went to the Garden of " +
+     love + "\n"  +
+    "And" + " " + verb + " " +
+    "what I never had" + " " + verb +"\n" +
+    "A" + " " + noun + " " +
+    "was built in the midst" + "\n" +
+    "Where I used to play on the green" + "\n" + "\n"+
+    "And the gates of this" + " " + noun + " "+
+    "were shut" + "\n" +
+    "And" + " " + "'Thou" + " " 
+    + lexicon.randomWord("vbd") + " " 
+    + "not" + "'" + "\n"+
+    "So I turned to the Garden of"+ " "+ love + "\n"+
+    "That so many" + " " + lexicon.randomWord("jj", 1)+ " " + flowers+ 
+    " " + "bore" + '\n' + "\n" +
+    "And I saw it was filled with" + " " + 
+    lexicon.randomWord("nns",2)  + "\n" +
+    "And" + " " + lexicon.randomWord("nns",3) + " " +  
+    "where" + " " + flowers + " " + "should be" + "\n"+
+    "And priests in" + " " + lexicon.randomWord("jj", 1) +
+    " " + "gowns were" + " " + lexicon.randomWord("vbg",2) + " "+ "their rounds" + "\n" +
+    "And binding with briars my" + " " + lexicon.randomWord("nns",1) + " "+ "and desires.";
+    
+  textSize(20);
+  text(output, 0,70,width,height);
 }
 
 function generateWords() {
@@ -48,6 +93,6 @@ function generateWords() {
   //lexicon.randomWord("jj", 2) + " " +
   sentences[6]=lexicon.randomWord("nn", 2);
   //second paragraph
-  text("Garden of"+" " +sentences[6], 0, 0, width, height);
+  text("Garden of"+" " +sentences[6], 0, 50, width, height);
   //third
 }
