@@ -87,12 +87,3 @@ function mousePressed() {
   text(output, 0,70,width,height);
 }
 
-function generateWords() {
-  //first paragraph
-  //lexicon.randomWord("vb", 1) + " " + 
-  //lexicon.randomWord("jj", 2) + " " +
-  sentences[6]=lexicon.randomWord("nn", 2);
-  //second paragraph
-  text("Garden of"+" " +sentences[6], 0, 50, width, height);
-  //third
-}
