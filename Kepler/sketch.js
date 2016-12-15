@@ -249,23 +249,44 @@ function info() {
   strokeWeight(2);
   noFill();
   stroke("white");
-  ellipse(width/4, (height)/5, planetRadiiAmt, planetRadiiAmt);
+  ellipse((width/4)-20, (height)/5, planetRadiiAmt, planetRadiiAmt);
   stroke(lerpedCol);
-  ellipse(width/4, (3*height)/5, starRadiiAmt, starRadiiAmt);
+  ellipse((width/4)-20, (3*height)/5, starRadiiAmt, starRadiiAmt);
   
   stroke("DeepSkyBlue");
-  ellipse((3*width)/4, (height)/5, earthRadiiAmt, earthRadiiAmt);
+  ellipse(((3*width)/4)+40, (height)/5, earthRadiiAmt, earthRadiiAmt);
   stroke(sunlerpedCol);
-  ellipse((3*width)/4, (3*height)/5, sunRadiiAmt, sunRadiiAmt);
+  ellipse((3*width)/4+40, (3*height)/5, sunRadiiAmt, sunRadiiAmt);
   pop();
   
+  
   push();
-  noStroke();
-  fill("white");
-  text(nameText + " " + "+ host star to scale", 10, 30);
-  text("Earth + Sun to scale", ((3*width)/4)+80, 30);
-  pop();
- 
+  fill("DeepSkyBlue");
+  textSize(12);
+  text("Earth", ((3*width)/4)+28, (height)/5-20);
+ 	pop();
+  
+  push();
+  fill("White");
+  textSize(12);
+  textAlign(CENTER);
+  text(nameText, (width/4-20)-((nameText.length)/2), (height)/5-20);
+ 	pop();
+  
+  push();
+  fill(lerpedCol);
+  textSize(12);
+  textAlign(CENTER);
+  text("Host star",(width/4)-20, (3*height)/5);
+ 	pop();
+  
+  push();
+  fill(sunlerpedCol);
+  textSize(12);
+  textAlign(CENTER);
+  text("Sun", (3*width)/4+40, (3*height)/5);
+ 	pop();
+  
 }
 
 function redo() {
