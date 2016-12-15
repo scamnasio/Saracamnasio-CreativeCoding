@@ -1,8 +1,8 @@
-var firstWord = ["The NY Times", "Mitt Romney", "Global Warming", "Paul Ryan","Bernie Sanders", "Putin", "My tax return", "Megyn Kelly", "John Kasich", "Ivanka", "ISIS", "The mainstream media","The United States","Mexico","Germany", "Britain", "Jeb Bush",  "The Wall Street Journal", "Bill Clinton", "Politico", "Hillary Clinton", "Obama", "CNN", "Fox News", "The Electoral College"];
+var firstWord = ["The New York Times", "Brexit", "Fidel Castro", "Mitt Romney", "Coal", "Angela Merkel", "Ted Cruz", "Fake news", "Russia","Global Warming", "Planned Parenthood","Paul Ryan","Bernie Sanders", "Putin", "My tax return", "Megyn Kelly", "John Kasich", "Ivanka", "ISIS", "The mainstream media","The United States","Mexico","Germany", "Britain", "Jeb Bush",  "The Wall Street Journal", "Bill Clinton", "Politico", "Hillary Clinton", "Obama", "CNN", "Fox News", "The Electoral College"];
 var secondWord = ["so crooked", "a Chinese conspiracy", "a loser", "out of control","a scam","such a sham", "going out of business","bad", "very biased", "unbelievably unfair", "failing", "poorly run and managed", "a third rate talent", "so totally biased", "so sad", "so bad", "a joke", "rigged", "goofy", "a puppet", "terrific", "a great success", "amazing", "unbelievably successful", "wonderful", "great", "embarrassing",  "stupid", "winning", "tremendous", "very good", "the best, just the best"];
-var thirdWord = ["Sad", "Loser","I don’t think so", "HUGE", "Enjoy", "Tough, like me", "Special", "No more", "Stay safe", "Big problem", "Apologize", "Too bad", "Very nice", "Very unfair", "Very exciting", "Can’t wait"];
-var fourthWord = ["China", "MAGA", "Huge","CrookedHillary", "LOSER", "AmericaFirst", "VoterFraud", "CorruptHillary", "ImABigot", "DrainTheSwamp"];
-var fifthWord = ["XENOPHOBIC", "MYSOGINIST", "HOMOPHOBIC", "INTOLERANT"]
+var thirdWord = ["Sad", "Loser","I don’t think so", "HUGE", "Enjoy", "I love Hispanics","Special", "Not on my watch","No more", "Stay safe", "Big problem", "Apologize", "Too bad", "Very nice", "Very unfair", "Very exciting", "Can’t wait"];
+var fourthWord = ["China", "MAGA", "MissUniverse", "CincoDeMayo", "Brexit", "TinyHands", "SmallLoan","Huge","CrookedHillary", "LOSER", "AmericaFirst", "VoterFraud", "CorruptHillary", "ImABigot", "DrainTheSwamp"];
+var fifthWord = ["XENOPHOBIC", "MYSOGINIST", "HOMOPHOBIC", "INTOLERANT", "BIGOT"]
 
 function preload() {
   img = loadImage("trump2.png");
@@ -26,7 +26,7 @@ function setup() {
   })
 }
 function trumpImg() {
-  background(29, 161, 242);
+  background(41, 56, 126);
   image(img, width/6, height/3, img.width/2, img.height/2);
   fill(255);
   noStroke();
